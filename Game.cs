@@ -70,7 +70,7 @@ namespace HelloWorld
         {
             //Get input for player one
             char input;
-            GetInput(out input, "Longsword", "Dagger", "Welcome! Please choose a weapon.");
+            GetInput(out input, "Longsword", "Dagger", "Welcome!! Please choose a weapon.");
             //Equip item based on input value
             if (input == '1')
             {
@@ -139,11 +139,11 @@ namespace HelloWorld
             }
             if(_player1.GetIsAlive())
             {
-                Console.WriteLine("Player 1 wins!!1!1!!11!11?");
+                Console.WriteLine("Player 1 wins??????");
             }
             else
             {
-                Console.WriteLine("Player 2 wins??????????");
+                Console.WriteLine("Player 2 wins!!!");
             }
             ClearScreen();
             _gameOver = true;
