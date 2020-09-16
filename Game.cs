@@ -37,6 +37,12 @@ namespace HelloWorld
 
         }
 
+        public void InitializeRoles()
+        {
+            //_ninja.statBoost = 50;
+
+
+        }
         public void InitializeItems()
         {
             _longSword.statBoost = 15;
@@ -65,6 +71,17 @@ namespace HelloWorld
             }
         }
 
+        //public string ChooseRole(Player player)
+        //{
+            //char input;
+            //GetInput(out input, "Chef", "Some Class", "Hipster");
+
+
+
+
+
+
+        //}
         //Equip items to both players in the beginning of the game
         public void SelectItem(Player player)
         {
@@ -74,11 +91,11 @@ namespace HelloWorld
             //Equip item based on input value
             if (input == '1')
             {
-                player.EquipItem(_longSword);
+                player.AddItemToInventory(_longSword, 0);
             }
             else if (input == '2')
             {
-                player.EquipItem(_dagger);
+                player.AddItemToInventory(_dagger, 0);
             }
         }
 
@@ -86,8 +103,9 @@ namespace HelloWorld
         {
             Console.WriteLine("What is your name?");
             string name = Console.ReadLine();
-            Player player = new Player(name, 100, 10);
+            Player player = new Player(name, 100, 10,5);
             SelectItem(player);
+            //ChooseRole(player);
             return player;
         }
 
